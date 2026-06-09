@@ -1,0 +1,39 @@
+{
+  "dmsi": {
+    "base_url": "https://api-1634-1.dmsi.com/REPLACE/PATH/AgilityPublic/rest",
+    "branch": "01HIO",
+    "login_id": "HIOAPI",
+    "password": "PUT-IN-config.json-NOT-HERE",
+    "customer_id": "1"
+  },
+  "db": {
+    "path": "data/hio_items.db",
+    "conflict_report_dir": "data"
+  },
+  "files": {
+    "xref": "data/xref.xlsx",
+    "inventory_xlsx": "data/inventory_export.xlsx",
+    "inventory_json": "data/inventory_export.json"
+  },
+  "thermal": {
+    "printer_share": "\\\\HOSTNAME\\ZQ620",
+    "printer_ip": "",
+    "printer_port": 9100,
+    "dpi": 203,
+    "print_width_dots": 574,
+    "label_length_dots": 406
+  },
+  "sheet": {
+    "page": "letter",
+    "cols": 4,
+    "rows": 8,
+    "label_w_in": 2.0625,
+    "label_h_in": 1.25,
+    "margin_left_in": 0.125,
+    "margin_top_in": 0.5,
+    "col_pitch_in": 2.0625,
+    "row_pitch_in": 1.25,
+    "yellow_at_top": true
+  },
+  "server": { "host": "0.0.0.0", "port": 8080 }
+}

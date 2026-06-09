@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>HIO Bin Tags</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>HIO Bin Tags</h1>
+  <nav>
+    <button class="tab active" data-tab="scan">Scan &amp; print</button>
+    <button class="tab" data-tab="batch">Batch sheet</button>
+  </nav>
+</header>
+
+<main>
+  <!-- SCAN / single tag (mobile primary) -->
+  <section id="scan" class="panel active">
+    <div class="scanbar">
+      <input id="token" type="text" inputmode="text" autocomplete="off"
+             placeholder="Scan or type a number" autofocus>
+      <button id="camBtn" type="button">Camera</button>
+    </div>
+    <video id="cam" playsinline hidden></video>
+    <div id="result" class="card" hidden></div>
+    <p id="scanMsg" class="msg"></p>
+  </section>
+
+  <!-- BATCH sheet (desktop primary) -->
+  <section id="batch" class="panel">
+    <p class="hint">Paste numbers (one per line) and/or scan into the box, then resolve.</p>
+    <div class="scanbar">
+      <input id="batchScan" type="text" autocomplete="off" placeholder="Scan to add to queue">
+    </div>
+    <textarea id="batchList" rows="5" placeholder="3581937571&#10;FCP-3757/01"></textarea>
+    <div class="row">
+      <button id="resolveBtn" type="button">Resolve</button>
+      <label>Start cell <input id="startCell" type="number" min="1" max="32" value="1"></label>
+    </div>
+    <div id="batchTable"></div>
+    <div class="row">
+      <button id="previewBtn" type="button">Preview sheet</button>
+      <button id="printSheetBtn" type="button">Print sheet</button>
+      <a href="/api/calibrate/sheet" target="_blank">Calibration sheet</a>
+    </div>
+    <p id="batchMsg" class="msg"></p>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
