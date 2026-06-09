@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+config.json
+
+data/*.db
+data/token_conflicts_*.xlsx
+
+.DS_Store
